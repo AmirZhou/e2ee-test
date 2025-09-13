@@ -10,12 +10,6 @@ This protocol defines end-to-end encryption for file storage to ensure complianc
 
 ### Alberta PIPA & Canada PIPEDA Compliance
 
-**Why E2EE is Required:**
-- **PIPA Section 34**: Organizations must protect personal information with safeguards appropriate to the sensitivity of the information
-- **PIPEDA Principle 7**: Personal information must be protected by security safeguards appropriate to the sensitivity of the information
-- **Breach Notification**: Both acts require notification of privacy breaches - E2EE minimizes breach impact
-- **Data Sovereignty**: Ensures user control over their sensitive documents
-
 **E2EE Benefits for Compliance:**
 - ✅ **Zero-knowledge architecture** - server cannot access plaintext
 - ✅ **Breach protection** - compromised servers cannot expose user files  
@@ -24,15 +18,18 @@ This protocol defines end-to-end encryption for file storage to ensure complianc
 
 ## 🔄 Sequence Diagram
 
-![E2EE - Sequence Diagram](https://hallowed-ptarmigan-685.convex.cloud/api/storage/3f573be1-d33f-4d0f-bea0-95cf47709709)
+<p align="center">
+  <img src="https://hallowed-ptarmigan-685.convex.cloud/api/storage/3f573be1-d33f-4d0f-bea0-95cf47709709" alt="E2EE - Sequence Diagram" width="80%">
+</p>
+
 
 
 ## Example Demo
 ![img](https://hallowed-ptarmigan-685.convex.cloud/api/storage/c3a577cc-f3a2-444b-a3e4-cc7042906005)
-![Live](https://e2ee-test.paraflux.ca)
+[Live Demo](https://e2ee-test.paraflux.ca)
 
 ## Repo
-![Git Repo](https://github.com/AmirZhou/e2ee-test)
+[Git Repo](https://github.com/AmirZhou/e2ee-test)
 
 ## 🔄 Protocol Implementation
 
@@ -99,4 +96,3 @@ const downloadFile = async (fileId: string, passphrase: string) => {
 
 ---
 
-**Bottom Line**: The server never sees unencrypted files. All encryption/decryption happens on the client-side. The passphrase is users responsibility to manage securely!
